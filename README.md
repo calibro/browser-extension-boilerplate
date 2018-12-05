@@ -1,1 +1,1 @@
-# browser-extension-boilerplate
+# browser-extension-boileplate
