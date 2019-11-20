@@ -1,25 +1,33 @@
 {
   "manifest_version": 2,
-  "name": "My extension name",
-  "version": "0.1",
-  "description": "My extension description",
-  "homepage_url": "https://github.com/uf0/browser-extension-boileplate",
+  "name": "my extension name",
+  "description": "My extension description!",
+  "version": "1.0",
+  "homepage_url": "https://github.com/calibro/browser-extension-boileplate",
   "icons": {
+    "19": "icons/icon-19.png",
+    "38": "icons/icon-38.png",
     "48": "icons/icon-48.png",
     "96": "icons/icon-96.png"
   },
-  "permissions": ["activeTab", "tabs"],
-  "browser_action": {
-    "default_icon": "icons/icon-96.png",
-    "default_popup": "popup/index.html",
-    "default_title": "Click me!",
-    "browser_style": true
+  "background": {
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["assets/ready.min.js", "index.js"],
+      "js": ["index.js"],
       "css": ["style.css"]
     }
-  ]
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "icons/icon-19-off.png",
+      "38": "icons/icon-38-off.png"
+    },
+    "browser_style": true,
+    "default_title": "apply css"
+  },
+
+  "permissions": ["activeTab", "tabs", "storage"]
 }

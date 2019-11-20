@@ -1,0 +1,12 @@
+.my-beautiful-extension {
+  transform: rotate(180deg);
+  border: 10px red solid;
+}
+
+.my-beautiful-extension .rep-main-logo {
+  transform: rotate(180deg) !important;
+}
+
+/* .my-beautiful-extension .logoRotated {
+  transform: rotate(180deg) !important;
+} */
